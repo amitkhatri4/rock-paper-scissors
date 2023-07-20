@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;   /* Removes default padding and margin.*/
+    box-sizing: border-box; /* Makes sure padding and border are included in the element's total width and height.*/
+    background: #082c6c; /* Sets the background color to a dark blue shade.*/
+    color: #fff; /* Sets the text color to white.*/
+}
+/* To center everything in game */
+.game{
+    display: flex;
+    flex-direction: column; /*Arranges the child elements in a column.*/
+    height: 100vh; /*Sets the height and width of the game section to cover the entire viewport.*/
+    width: 100vw;
+    justify-content: center; /*Centers the child elements vertically and horizontally.*/
+    align-items: center;
+}
+  
+/* Title of the game */
+.title{
+    position: absolute;  /*used to position an element on a web page in relation to its closest positioned ancestor or to the document itself*/
+    
+    top: 0;  /*Positions the title at the top of the game section.*/
+    font-size: 4rem; /*Sets the font size to 4 rem*/
+    z-index: 2; /* Sets the stacking order of the title above other elements. */
+}
+  
+/* Score Board */
+.score{
+    display: flex;
+    width: 30vw;  /*Sets the width of the score board to 30% of the viewport width.*/
+    justify-content: space-evenly;  /* Distributes the child elements evenly with equal space between them.*/
+    position: absolute;
+    top: 70px; /* Positions the score board at the top of the game section with a 70px top offset.*/
+    z-index: 1; /*Sets the stacking order of the score board above other elements.*/
+}
+  
+/* Score  */
+.p-count,.c-count{ /*Styles the player and computer score counts.*/
+    text-align: center; /* Centers the text horizontally.*/
+    font-size: 1.5rem; /*;: Sets the font size to 1.5 rem.*/
+    margin-top: 1rem; /* Adds a top margin of 1 rem.*/
+}
+  
+/* displaying three buttons in one line */
+.options{
+    display: flex;
+    width: 50vw;
+    justify-content: space-evenly; /*Distributes the child elements evenly with equal space between them.*/
+    margin-top: 2rem; /* Adds a top margin of 2 rem.*/
+} 
+  
+/* Styling on all three buttons */
+.rock, .paper, .scissor{
+    padding: 0.8rem; /*Adds padding to the buttons.*/
+    width: 100px; /*Sets the width of the buttons to 100 pixels.*/
+    border-radius: 10px; /*Adds rounded corners to the buttons.*/
+    background: green;
+    outline: none; /*Removes the outline when the button is focused.*/
+    border-color: green;
+    border: none;
+    cursor: pointer; /*Changes the cursor to a pointer on hover.*/
+}
+  
+.move{
+    font-size: 2rem; /*Hides the reload button by default.*/
+    font-weight: bold;
+}
+  
+/* Reload button style */
+.reload {
+    display: none;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: green;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+  
+.result{
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+  
+/* Responsive Design */
+@media screen and (max-width: 612px) /*Applies the following styles for screens with a maximum width of 612 pixels (responsive design).*/
+{  
+    .title{ /*Centers the text horizontally*/
+        text-align: center;
+    }
+    .score{ /*: Positions the score board at a higher top position.*/
+        position: absolute;
+        top: 200px;
+        width: 100vw;
+    }
+    .options{ /*Adjusts the width of the options section to fill the viewport width.*/
+        width: 100vw;
+    }
